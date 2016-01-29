@@ -18,7 +18,7 @@
 <body leftmargin="0" topmargin="0">
 <!-- ----------------------------------------- -->
  
-<DIV class='title'></DIV>
+<DIV class='title'>Github 실습2</DIV>
  
 <DIV class='content'>
 <FORM name='frm' method='POST' action='./.jsp'>
