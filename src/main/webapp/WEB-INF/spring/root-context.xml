@@ -18,7 +18,7 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.sprin
   <bean id="dataSource"
     class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
     <property name="driverClass" value="org.gjt.mm.mysql.Driver" />
-    <property name="url" value="jdbc:mysql://localhost:3306/web?useUnicode=true&characterEncoding=euckr" />
+    <property name="url" value="jdbc:mysql://localhost:3306/web?useUnicode=true&amp;characterEncoding=euckr" />
     <property name="username" value="root" />
     <property name="password" value="1234" />
   </bean> 
