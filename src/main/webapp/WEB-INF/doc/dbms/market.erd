@@ -909,7 +909,7 @@
                 <defaultValue></defaultValue>
               </net.java.amateras.db.visual.model.ColumnModel>
               <net.java.amateras.db.visual.model.ColumnModel>
-                <columnName>title</columnName>
+                <columnName>content</columnName>
                 <logicalName>내용</logicalName>
                 <columnType class="net.java.amateras.db.dialect.ColumnType">
                   <name>MEDIUMTEXT</name>
