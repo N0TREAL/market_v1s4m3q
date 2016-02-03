@@ -27,9 +27,9 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.sprin
     <property name="dataSource" ref="dataSource" />
     <!-- 아래부분은 매핑할 xml파일이 있는 패키지경로를 설정한다. -->
     <property name="typeAliasesPackage" 
-                  value="dev.mvc.code,
-                            dev.mvc.blogcategory,
-                            dev.mvc.blog" />
+                  value="dev.mvc.storage,
+                           dev.mvc.item,
+                           dev.mvc.member" />
     <property name="mapperLocations" value="classpath:dev/mvc/**/*.xml" />
   </bean>
   
