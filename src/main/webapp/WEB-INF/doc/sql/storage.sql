@@ -50,6 +50,15 @@ ORDER BY storageno ASC;
  제목3   내용3     2016-02-02 winter.jpg       3
  제목4   내용4     2016-02-02 winter.jpg       4
 
+SELECT title, content, rdate, thumb_file1, itemno
+FROM storage
+ORDER BY storageno DESC;
+
+ title content rdate      thumb_file1 itemno
+ ----- ------- ---------- ----------- ------
+ 제목4   내용4     2016-02-02 winter.jpg       4
+ 제목3   내용3     2016-02-02 winter.jpg       3
+ 제목2   내용2     2016-02-02 winter.jpg       2
 
  
 4. 수정
