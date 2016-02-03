@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dev.mvc.blog.StorageMapperInter">
+  <!-- 등록 -->
+  <insert id="create" parameterType="StorageVO">
+  INSERT INTO storage(title, content, rdate, thumb_file1, itemno)
+  VALUES (#{title}, #{content}, now(), #{thumb_file1}, #{itemno})
+  </insert>
+  
+  <!-- 모든 글 목록 -->
+  <select id="list" resultType="StorageVO">
+  SELECT title, content, rdate, thumb_file1, itemno
+  FROM storage
+  ORDER BY storageno DESC
+  </select>
+
+  <!--  수정  -->
+  <update id="update" parameterType="StorageVO">
+  UPDATE storage
+  SET title=#{title}, content=#{content}, thumb_file1=#{thumb_file1}
+  WHERE storageno=#{storageno}
+  </update>
+  
+  <!--  삭제  -->
+  <delete id="delete" parameterType="int">
+  DELETE FROM storage
+  WHERE storageno=#{storageno}  
+  </delete>
+
+</mapper>
