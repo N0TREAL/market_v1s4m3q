@@ -2,3 +2,34 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dev.mvc.item.ItemMapperInter">
+  <insert id="create" parameterType="ItemVO">
+    INSERT INTO 
+    VALUES(#{title}, #{content}, 0, now(), #{file}, #{file1}, 0, #{blogcategoryno})
+  </insert>
+  
+  <!-- 모든 글 목록 -->
+  <select id="list" resultType="ItemVO">
+    SELECT 
+    FROM blog
+    ORDER BY blogno DESC
+  </select> 
+
+  <select id="read" resultType="ItemVO" parameterType="int">
+    SELECT 
+    FROM blog
+    WHERE blogno=#{blogno}
+  </select>
+  
+  <update id="update" parameterType="ItemVO">
+    UPDATE item
+    SET title=#{title}, content=#{content}, file=#{file}, file1=#{file1} 
+    WHERE blogno=#{blogno}
+  </update>
+  
+  <delete id="delete" parameterType="int">
+    DELETE FROM item
+    WHERE itemno=#{itemno}
+  </delete>
+</mapper>
